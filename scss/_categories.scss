@@ -1,0 +1,42 @@
+// Fix
+.categories__item,
+.categories__icon {
+  display: inline-block;
+}
+
+// Css style main
+.categories {
+  .categories__item {
+    border-bottom: 1px solid $color-secondary;
+    padding: 0rem 0.3rem;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $color-secondary;
+    }
+    
+    .categories__icon {
+      vertical-align: top;
+      margin-right: -0.1rem;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $color-primary;
+      a {
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .categories__item--action {
+    border-bottom: 2px solid $color-primary;
+    a {
+      color: $color-primary;
+      font-weight: bold;    
+    }
+  }   
+}

@@ -1,0 +1,60 @@
+// Variables
+$color: #efefef;
+$color-active: #3fbce7;
+$background-active: #efefef;
+$border-right: #c0dce5;
+$size: 1.05rem;
+
+// Css style main
+.navmenu {
+  background-color: $color-theme;
+  .navmenu__group-item {
+    margin: 0 !important; // Fix margin <ul> - ko hiểu tại sao chắc do boostrap
+    padding: 0 !important; // Fix padding <ul> - ko hiểu tại sao chắc do boostrap
+    .navmenu__item {
+      display: inline-block;
+      list-style: none;
+      padding: 0rem 1rem;
+      line-height:  4rem;
+      border-right: 1px solid $border-right;
+      text-align: center;
+      margin-left: -0.25rem;
+      cursor: pointer;
+      text-align: center;
+      i {
+        display: inline-block;
+        margin-right: 0rem;
+        vertical-align: middle;
+        color: $color;
+        font-size: 2rem;
+      }
+      a {
+        color: $color;
+        font-size: $size;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      &:hover{
+        background-color: $background-active;
+        a,i {
+            color: $color-active;
+        }
+      }
+    }
+
+    .navmenu__item--logo {
+      padding-left: 0rem !important;
+      border-right: 1px solid #80c8dd !important;
+      &:hover{
+        background: none !important;
+      }
+    }
+
+    .navmenu__item--active {
+        background-color: $background-active;
+        a,i {
+            color: $color-active;
+        }
+    }
+  }
+}
